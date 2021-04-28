@@ -7,9 +7,9 @@ const int enablePin2 = 7; // H-bridge enable pin for motor 2
 const int motor2A = 6; // arduino pin that controls 3A
 const int motor2B = 9; // arduino pin that controls 4A
 
-const int moveDuration; // duration for straight bit
-const int moveDuration2; // duration for second straight bit
-const int turnDuration; // configure timing for turning of 90 degrees
+const int moveDuration = 1000; // duration for straight bit
+const int moveDuration2 = 1000; // duration for second straight bit
+const int turnDuration = 800; // configure timing for turning of 90 degrees
 const int speed = 127; // 0 - 255 for pwm - 127 for now which is half(ish)
 
 // i am not using millis() right now
