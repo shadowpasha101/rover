@@ -8,11 +8,11 @@ const int motor2A = 6; // arduino pin that controls 3A
 const int motor2B = 9; // arduino pin that controls 4A
 
 const int moveDuration = 6000; // duration for straight bit
-const int moveDuration2 = 2000; // duration for second straight bit
-const int turnDuration = 2000; // configure timing for turning of 90 degrees
+const int moveDuration2 = 4000; // duration for second straight bit
+const int turnDuration = 1950; // configure timing for turning of 90 degrees
 const int speed = 100; // 0 - 255 for pwm - 127 for now which is half(ish)
 
-// veers to the left roughly 13 degrees (at d = 6000, s = 100)
+// veers to the left roughly 13 degrees (at d = 6000, s = 100) - look at document
 // moveDuration at 4000 and speed = 100 gives us ~20cm
 // moveDuration at 6000 and speed = 100 gives us ~29cm --- 
 
@@ -35,30 +35,30 @@ void setup() {
 
 void loop() {
 //  this is a basic template, we need to test to get a feel for the timings
-//  goStraight(moveDuration); // first straight
-//  delay(100);
-//  turnRight(turnDuration);
-//  delay(100);
-//  goStraight(moveDuration2); // shorter length of rectangle
-//  delay(100);
-//  turnRight(turnDuration);
-//  delay(100);
-//  goStraight(moveDuration); // long length (2nd time)
-//  delay(100);
-//  turnRight(turnDuration);
-//  delay(100);
-//  goStraight(moveDuration2); // 2nd time short length
-//  delay(100);
-//  turnRight(turnDuration);
-//  delay(5000); //wait 5 seconds before going again
+ goStraight(moveDuration); // first straight
+ delay(100);
+ turnRight(turnDuration);
+ delay(100);
+ goStraight(moveDuration2); // shorter length of rectangle
+ delay(100);
+ turnRight(turnDuration);
+ delay(100);
+ goStraight(moveDuration); // long length (2nd time)
+ delay(100);
+ turnRight(turnDuration);
+ delay(100);
+ goStraight(moveDuration2); // 2nd time short length
+ delay(100);
+ turnRight(turnDuration);
+ delay(10000); //wait 10 seconds before going again
 
     //testing straight
-//   goStraight(moveDuration);
-//   delay(8000);
+    // goStraight(moveDuration);
+    // delay(8000);
 
     //testing turning
-    turnRight(turnDuration);
-    delay(9000);
+    // turnRight(turnDuration);
+    // delay(9000);
 
 }
 
