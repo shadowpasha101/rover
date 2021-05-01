@@ -9,7 +9,7 @@ const int motor2B = 9; // arduino pin that controls 4A
 
 const int moveDuration = 6000; // duration for straight bit
 const int moveDuration2 = 4000; // duration for second straight bit
-const int turnDuration = 1500; // configure timing for turning of 90 degrees
+const int turnDuration = 1950; // configure timing for turning of 90 degrees
 const int speed = 100; // 0 - 255 for pwm - 127 for now which is half(ish)
 
 // veers to the left roughly 13 degrees (at d = 6000, s = 100) - look at document
@@ -82,12 +82,12 @@ void goStraight(int duration) {
 
 void turnRight(int duration) { // i actually dont know if this will turn right or left because it depends on other stuff
     //motor 1
-    analogWrite(motor1B, speed);
-    analogWrite(motor1A, 0); // 0 is for "off"
+    analogWrite(motor1A, speed);
+    analogWrite(motor1B, 0); // 0 is for "off"
 
     //motor 2
-    analogWrite(motor2B, 0); // 0 is for "off"
-    analogWrite(motor2A, speed);
+    analogWrite(motor2A, 0); // 0 is for "off"
+    analogWrite(motor2B, speed);
     // pin A and B are turned on so the motors turn in opposite directions
 
     delay(duration); // keeps going for specified amount of time
@@ -97,4 +97,3 @@ void turnRight(int duration) { // i actually dont know if this will turn right o
     analogWrite(motor2B, 0);
 
 }
-
