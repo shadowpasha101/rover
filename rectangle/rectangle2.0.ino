@@ -94,7 +94,7 @@ void turnRight(int duration) { // i actually dont know if this will turn right o
 
     // stops both motors
     analogWrite(motor2A, 0);
-    analogWrite(motor21, 0);
+    analogWrite(motor1A, 0);
 
 }
 
