@@ -93,8 +93,8 @@ void turnRight(int duration) { // i actually dont know if this will turn right o
     delay(duration); // keeps going for specified amount of time
 
     // stops both motors
-    analogWrite(motor1A, 0);
-    analogWrite(motor2B, 0);
+    analogWrite(motor2A, 0);
+    analogWrite(motor21, 0);
 
 }
 
