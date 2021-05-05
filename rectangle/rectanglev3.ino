@@ -9,7 +9,7 @@ const int motor2B = 9; // arduino pin that controls 4A
 
 const int moveDuration = 6000; // duration for straight bit
 const int moveDuration2 = 4000; // duration for second straight bit
-const int turnDuration = 1605; // configure timing for turning of 90 degrees
+const int turnDuration = 1650; // configure timing for turning of 90 degrees
 const int speed = 100; // 0 - 255 for pwm - 127 for now which is half(ish)
 
 // veers to the left roughly 13 degrees (at d = 6000, s = 100) - look at document
