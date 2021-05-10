@@ -141,6 +141,8 @@ void turnStep(int steps){ // takes in the amount of times we want to step
 
 	delay(duration/steps); // keeps turning for the duration divided by step count
 	
+	// put logic for reading and moving here
+
 	// stops both motors
 	analogWrite(motor1A, 0);
 	analogWrite(motor2B, 0);
