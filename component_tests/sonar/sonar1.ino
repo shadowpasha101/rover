@@ -152,10 +152,13 @@ void turnStep(int steps){ // takes in the amount of times we want to step
 
 
 void followRight(){ 
-    if (sonarRead() < 120){
+    if (sonarRead() < 40){
       Serial.print("STOP");
         stopMotors();
-    }
+		delay(200);
+		turnRight(turnDuration);
+		goStraight(duration);
+	}
   else{
 	goStraightNoStop();
   }
